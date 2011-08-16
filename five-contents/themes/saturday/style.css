@@ -1,0 +1,97 @@
+.user table {border-collapse: separate;border-spacing: 0;}
+.user th, .user td {text-align: left;font-weight: 400;}
+
+.user table.registertable {margin:0 auto;width:700px}
+.user div.introduction {}
+.user h1 {letter-spacing: -1px;line-height: 35px;padding: 0 0 10px;}
+
+.user ul#featurelist {list-style: none;padding-left: 20px;}
+.register ul#featurelist li {margin: 0 0 15px;}
+.login ul#featurelist li {margin: 0 0 5px;}
+.user ul#featurelist li {font-size: 14px;
+color: #999;
+line-height: 14px;
+font-weight: 700;
+list-style-type: none;
+list-style-image: none;
+padding:0 25px;
+}
+.user div.joinbutton {border:1px solid transparent;}
+.user a#joinButton {
+height: 49px;
+display: block;
+outline: none;
+font-size: 19px;
+font-weight: 700;
+line-height: 46px;
+text-align: center;
+color: #444;
+text-decoration: none;
+}
+.user div.loginform {
+width: 200px;
+float: right;
+height: auto;
+padding: 20px 15px 0 30px;
+}
+.user .content-left h2 {
+color: #494637;
+font-size: 24px;
+font-weight: bold;
+letter-spacing: -1px;
+margin-top: 0px;
+margin-bottom: 8px;
+border-bottom: 1px solid #DDD;
+font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+}
+.user div.loginform input.frontlogin {
+font-size: 16px;
+font-weight: 700;
+color: #666;
+width: 90%;
+padding: 3px;
+}
+
+.user .registerleft {padding-top:20px;border-right:2px solid #555;}
+.user .button {padding: 1px 6px;cursor: pointer;}
+.site_errors {margin:30px auto!important;}
+
+.profile-picture img {display: block;margin: auto;max-width: 180px;}
+span.edit_profilepicture_icon {height: 18px;left: 7px;opacity: .95;position: absolute;top: 4px;width: 18px;}
+.profile-picture:hover .edit_profilepicture {display: block;}
+.edit_profilepicture {background: black;color: white;display: none;height: 20px;opacity: .7;padding: 6px 7px 0 23px;position: relative;right: 1px;top: 0;width: 100px;margin-bottom: -26px;}
+
+#leftCol {float: left;padding: 20px 0 0 2px;width: 179px;word-wrap: break-word;}
+.mvm {margin-top: 10px;margin-bottom: 10px;}
+#leftCol ul {list-style-type: none;margin: 0;padding: 0;}
+.uiSideNav li {position: relative;zoom: 1;}
+.uiSideNav ul .selectedItem .subitem, .uiSideNav ul .selectedItem .subitem:hover {background-color: #D8DFEA;font-weight: bold;}
+.uiSideNav .item, .uiSideNav .subitem {
+color: #333;
+line-height: 13px;
+}
+.uiSideNav .item, .uiSideNav .subitem {
+color: #333;
+display: block;
+line-height: 13px;
+padding: 3px 8px;
+position: relative;
+text-decoration: none;
+zoom: 1;
+}
+
+.profile-content {position:relative;float:left;width:500px;padding:20px;}
+.vendor-benefits {padding:8px;margin-left:15px;}
+.vendor-benefits li {padding:2px;}
+
+.pad20 {padding:20px;}
+.pad10 {padding:10px;}
+.pad10top {margin-top:10px !important;}
+
+.w457 {width:457px;}
+.w300 {width:300px;}
+.featured {border: 1px solid #CCC;margin: 0 0 10px 9px;height:120px;line-height:120px;background:url('images/featured-bg.jpg') 0 0;}
+.featured div {line-height:16px;}
+.featured h4 {font-size: 18px;line-height: 18px;margin-bottom: 10px;color: #937658;}
+.featured img {position:relative;float:left;margin-right:10px;}
+.featured strong {font-size:18px;margin-bottom:8px;display:block}

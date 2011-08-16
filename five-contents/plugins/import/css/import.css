@@ -1,0 +1,12 @@
+.import-wrapper {width: 990px;margin: 0 auto;}
+.import-col {position: relative;
+float: left;
+width: 200px;
+margin-right: 20px;
+border: 1px solid #555;
+background: #DDD;
+height: 150px;
+font-size: 15px;
+font-weight: bold;
+line-height: 150px;
+text-align: center;}

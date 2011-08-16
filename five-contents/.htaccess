@@ -1,0 +1,8 @@
+php_flag xcache.cacher 0
+
+## Protecting our configuration files
+<Files ~ ".xml">
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
