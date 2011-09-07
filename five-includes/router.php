@@ -1442,7 +1442,7 @@ class FiveRoute {
 		if (!$this->compiled()) {
 			$this->compile();
 		}
-		if (!preg_match($this->_compiledRoute, $url, $route)) {
+		if (!(@preg_match($this->_compiledRoute, $url, $route))) {
 			return false;
 		} else {
 			foreach ($this->defaults as $key => $val) {

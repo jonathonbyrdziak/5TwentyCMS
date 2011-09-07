@@ -17,6 +17,33 @@ add_action('init', 'redirect_if_forced', 1);
 add_action('system', 'system_pathes');
 
 /**
+ * Session stuff, didn't know where I should put it.
+ */
+function set_post_sessions() {
+	//save any post values prepended with "setting_"
+	foreach( $_POST as $k => $v )
+		if( substr( $k, 0, 8 ) == 'setting_' )
+			$_SESSION[$k] = $v;
+}
+
+function default_session() {
+	$this->save( 'some_setting', 'a_value' );
+}
+
+//identifier, value
+function session_save($i,$v) {
+	$_SESSION["setting_{$i}"] = $v;
+}
+
+//identifier, default
+function session_get($i,$d=false) {
+	if( isset( $_SESSION["setting_{$i}"] ) )
+		return $_SESSION["setting_{$i}"];
+	else
+		return $d;
+}
+	
+/**
  * Controller.
  * 
  * This function will locate the associated element and display it in the
@@ -53,7 +80,7 @@ function get_show_view( $name = null )
 	}
 	
 	if ($html)
-		$html = replace_template_codes( $html, @$args[1] );
+		$html = $html; //replace_template_codes( $html, @$args[1] ); ****this was throwing an error but looks important
 	return $html;
 }
 
@@ -321,7 +348,7 @@ function is_ssl() {
  */
 function is_520()
 {
-	if ($_SERVER['REMOTE_ADDR'] == '24.19.145.232') return true;
+	if ($_SERVER['REMOTE_ADDR'] == '24.19.145.232'||$_SERVER['REMOTE_ADDR'] == '67.233.234.10') return true;
 	return false;
 }
 	

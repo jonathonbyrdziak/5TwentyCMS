@@ -1,54 +1,9 @@
-php_flag xcache.cacher 0
-php_flag display_errors on
-php_value error_reporting 8191
-
-<Files php.ini>
-order allow,deny
-deny from all
-</Files>
-
-Options +FollowSymLinks
-Options +Indexes
-Options -MultiViews
-RewriteEngine On
-RewriteBase /
-
-RewriteRule ^admin maintenance.html($1) [NC,L]
-RewriteRule /?.*css(.+)$ css$1 [NC,L]
-RewriteRule /?.*img(.+)$ img$1 [NC,L]
-RewriteRule /?.*img/business(.+)$ img$1 [NC,L]
-RewriteRule /?.*img/products(.+)$ img$1 [NC,L]
-RewriteRule /?.*img/acct(.+)$ img$1 [NC,L]
-RewriteRule /?.*img/pp(.+)$ img$1 [NC,L]
-RewriteRule /?.*img/sexy_buttons(.+)$ img$1 [NC,L]
-RewriteRule /?.*img/slideshow(.+)$ img$1 [NC,L]
-RewriteRule /inc(.+)$ inc$1 [NC,L]
-RewriteRule /?.*js(.+)$ js$1 [NC,L]
-RewriteRule /bin(.+)$ bin$1 [NC,L]
-RewriteRule /?.*data(.+)$ data$1 [NC,L]
-RewriteRule /?.*modal_boxes(.+)$ modal_boxes$1 [NC,L]
-RewriteRule profile/public_profile profile/public_profile.php [NC,L]
-RewriteRule /?.*profile(.+)$ profile$1 [NC,L]
-
-RewriteRule ^/?product/([0-9]{5,20})/page/([0-9]{1,999})/sort/([a-zA-Z]+) product.php?id=$1&page=$2&sort=$3 [NC,L]
-RewriteRule ^/?product/([0-9]{5,20})/page/([0-9]{1,999}) product.php?id=$1&page=$2 [NC,L]
-RewriteRule ^/?product/([0-9]{5,20})$ product.php?id=$1 [NC,L]
-RewriteRule ^/?product/([0-9]{5,20})/.*$ product.php?id=$1 [NC,L]
-
-RewriteRule ^/?index.php(.*)$ index.php$1 [NC,L]
-
-#RewriteRule ^([a-zA-Z0-9\_]+)$ business.php?name=$1 [NC,L]
-#RewriteRule ^([a-zA-Z0-9\_]+)/action/recent_sales$ business.php?name=$1&action=recent_sales [NC,L]
-#RewriteRule ^([a-zA-Z0-9\_]+)/[a-zA-Z0-9\-]*$ business.php?name=$1 [NC,L]
-
 # BEGIN Five CMS
-<IfModule mod_rewrite.c>
-	RewriteEngine On
-	RewriteBase /
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
-</IfModule>
-
-ErrorDocument 404 /errors/404
+#<IfModule mod_rewrite.c>
+#	RewriteEngine On
+#	RewriteBase /
+#	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+#</IfModule>
 # END Five CMS

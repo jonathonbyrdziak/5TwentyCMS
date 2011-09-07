@@ -13,47 +13,6 @@
 require_once dirname(__file__).'/five-includes/bootstrap.php';
 
 /**
- * Security Setting
- *
- * This constant is specifically checked within every file for security reaons.
- * It is not used for anything else but to prevent files from being directly
- * accessed.
- */
-define('IN_MAIN', true);
-
-/**
- * The maintenance
- * 
- * This file is included by the original developers for debugging reasons.
- */
-//require('maintenance.html');exit();
-
-/**
- * Start the Session
- * 
- * We're starting up the session here.
- * @TODO this needs more valid checks before we can start it securely.
- */
-@ session_start();
-
-/**
- * declaring globals
- */
-$page = 'main'; //main is default
-
-/**
- * Including libraries
- * 
- * We're going to require that the global libraries are included here.
- */
-require_once ABSPATH.'inc'.DS.'database.php';
-require_once ABSPATH.'inc'.DS.'common.php';
-
-require_once ABSPATH.'inc'.DS.'constants.php';
-require_once ABSPATH.'inc'.DS.'content_logic.php';
-require_once ABSPATH.'bin'.DS.'XPM4'.DS.'MAIL.php';
-
-/**
  * Initializing
  * 
  * Now that everything is loaded and ready, you can initialize
